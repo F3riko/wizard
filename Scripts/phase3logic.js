@@ -1,8 +1,4 @@
-// On page opening
-const checkIfAccessIsAllowed = () => {
-  checkLevlAccess(3);
-  return accessGranted ? accessGranted : goPreviousPage(2)
-}
+checkIfAccessIsAllowed(3)
 
 
 
@@ -37,15 +33,7 @@ const submitForm = () => {
 
 }
 
-
-// nextPageButton.addEventListener('click', () => {
-//   if (isValidImageUrl(imageUrlInput.value)) {
-//     goNextPage();
-//   }
-// });
-
 prevPageButton.addEventListener('click', () => {
-  console.log('it works')
   goPreviousPage(3);
 
 })

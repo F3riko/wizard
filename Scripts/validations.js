@@ -22,6 +22,7 @@ function isValidImageUrl(url) {
 }
 
 function validateImageUrl() {
+    const nextPageButton = document.getElementById('submitBtnPhase3');
     const imageUrl = imageUrlInput.value;
     if (!isValidImageUrl(imageUrl)) {
       errorMessage.textContent = 'Please enter a valid image URL';

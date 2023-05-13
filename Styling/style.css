@@ -138,7 +138,7 @@
   margin-bottom: 10px;
 }
 .phase1 input:invalid { 
-    brder-color: red;
+    border-color: red;
 }
 .phase1 input:valid{
     border-color:#ccc
