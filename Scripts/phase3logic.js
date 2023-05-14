@@ -1,6 +1,4 @@
-checkIfAccessIsAllowed(3)
-
-
+checkIfAccessIsAllowed(4)
 
 const nextPageButton = document.getElementById('next-page-button');
 const imageUrlInput = document.getElementById('image-url');
@@ -22,19 +20,19 @@ const submitForm = () => {
       const hobbies = formData.get("hobbies");
       
       // prepare data to be sent to local storage
-      userDataObj.img = img;
+      userDataObj.image = img;
       userDataObj.hobbies = hobbies;
       userDataObj.accessLvl += 1   
       if (isValidImageUrl(img)) {
           setDataInLocStorage(userDataObj)
-          goNextPage(3)
+          goNextPage(4)
       }
   });
 
 }
 
 prevPageButton.addEventListener('click', () => {
-  goPreviousPage(3);
+  goPreviousPage(4);
 
 })
 
