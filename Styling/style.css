@@ -1,41 +1,16 @@
-
-/* Styling the phase 4 */
-#phase4 img {
-    height: 100px;
-    width: 100px;
-}
-#phase4 h1 {
-    text-align: center;
-}
-
-#phase4 table {
-    border: 1px solid black;
-}
-
-#phase4 table td {
-    padding: 10px;
-}
-
-#phase4 section {
-    width: max-content;
-    margin: 50px auto;
-}
-
-/* new styles */
 /* Global styles */
 * {
     box-sizing: border-box;
 }
   
-.phase3, .phase2, .phase1 {
+.phase3, .phase2, .phase1, .phase3health, .phase4 {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
 }
 
-
-.phase3 form, .phase2 form, .phase1 form {
+.phase3 form, .phase2 form, .phase1 form, .phase3health form, .phase4 main {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -43,20 +18,20 @@
     max-width: 500px;
     padding: 20px;
 }
-  
-.phase3 h1, .phase2 h1, .phase1 h1 {
+
+.phase3 h1, .phase2 h1, .phase1 h1, .phase3health h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
-  
-.phase3 label, .phase2 label, .phase1 label{
+
+.phase3 label, .phase2 label, .phase1 label, .phase3health label{
     display: block;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.phase1 div {
+.phase1 div, .phase3health div {
     margin-bottom: 10px;
 }
 
@@ -67,6 +42,7 @@
     font-size: 16px;
     width: 100%;
 }
+
 .phase3 input[type="text"], .phase2 input[type="text"], .phase2 input[type="number"] {
     border: 2px solid #ccc;
     border-radius: 3px;
@@ -74,72 +50,56 @@
     padding: 10px;
     width: 100%;
 }
-  
+
 .phase3 input[type="text"]:focus {
     border-color: #007bff;
     outline: none;
 }
-  
+
 .phase3 .error {
     color: #dc3545;
     font-size: 14px;
     margin-bottom: 10px;
 }
-  
+
 .phase3 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-  
+
 .phase3 li {
     display: inline-block;
     font-size: 16px;
     margin-right: 5px;
-  }
-  
-.phase3 button {
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
+}
+
+.phase2 input[type="submit"], .phase2 button, .phase1 input[type="submit"], .phase3health button, .phase3health input[type="submit"], .phase3 button, .phase4 button {
     padding: 10px 20px;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
-  
-.phase3 button:hover {
-    background-color: #0062cc;
-}
 
-.phase2 input[type="submit"],
-.phase2 button, .phase1 input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.phase2 input[type="submit"]:hover, .phase1 input[type="submit"]:hover,
-.phase2 button:hover {
+.phase2 input[type="submit"]:hover, .phase1 input[type="submit"]:hover, .phase2 button:hover, .phase3health button:hover, .phase3health input[type="submit"]:hover, .phase3 button:hover, .phase4 button:hover {
   background-color: #00688B;
 }
 
 .phase2 #error-message {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 10px;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
+
 .phase1 input:invalid { 
     border-color: red;
 }
+
 .phase1 input:valid{
     border-color:#ccc
 }
@@ -177,7 +137,38 @@
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
-  
+
 #startWizard:hover {
     background-color: #0062cc;
+}
+
+.phase4 table {
+    margin-bottom: 10px;
+}
+
+.phase4 h1 {
+    text-align: center;
+}
+
+.phase4 section:last-child {
+    text-align: center;
+}
+
+.phase4 button {
+    width: 44%;
+    margin: 10px;
+}
+
+.phase4 section:nth-child(2) {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#phase4 img {
+    height: 200px;
+    width: 200px;
+
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #00688B;
 }

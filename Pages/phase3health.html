@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase Health</title>
+    <link rel="stylesheet" href="../Styling/style.css">
+</head>
+<body class="phase3health">
+    <main>
+        <form onsubmit="return validateRegFormPhase1(event)">
+            <h1>Additional info</h1>
+            <div>
+                <p>Are you happy?</p>
+                <label><input type="radio" name="happy" value="yes" required>Yes</label>
+                <label><input type="radio" name="happy" value="no">No</label>
+            </div>
+            <div>
+                <p>Will you do skydiving?</p>
+                <label><input type="radio" name="skydiving" value="yes" required>Yes</label>
+                <label><input type="radio" name="skydiving" value="maybe">Maybe</label>
+                <label><input type="radio" name="skydiving" value="no">No</label>
+            </div>
+            <div>
+                <p>Do you have $1 in you pocket now?</p>
+                <label><input type="radio" name="pocket" value="yes" required>Yes</label>
+                <label><input type="radio" name="pocket" value="no">No</label>
+            </div>
+            <div>
+                <button id="buttonBack">Back</button>
+                <input value="Submit" name="submitBttn" type="submit">
+            </div>
+        </form>
+    </main>
+    <script src="../Scripts/navigations.js"></script>
+    <script src="../Scripts/locStorOperations.js"></script>
+    <script src="../Scripts/phase3healthLogic.js"></script>
+</body>
+</html>

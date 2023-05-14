@@ -1,4 +1,4 @@
-checkIfAccessIsAllowed(4)
+checkIfAccessIsAllowed(5)
 
 // DOM interactions 
 const userInfoTable = document.querySelector('table')
@@ -32,7 +32,7 @@ function renderImage() {
 }
 
 buttonBack.addEventListener('click', () => {
-    goPreviousPage(4)
+    goPreviousPage(5)
 })
 
 renderUserInfoTable()
@@ -42,5 +42,6 @@ renderImage()
 
 resetAndBackHome.addEventListener("click", () => {
     localStorage.removeItem("user");
-    window.location = "phase1.html";
+    localStorage.removeItem("screenShown")
+    window.location = "splash.html";
 })

@@ -6,6 +6,11 @@ class User {
         this.city = ""
         this.street = ""
         this.number = NaN
+
+        this.happy = null
+        this.skydiving = null
+        this.pocket = null
+
         this.image = ""
         this.hobbies = []
         this.accessLvl = 2
