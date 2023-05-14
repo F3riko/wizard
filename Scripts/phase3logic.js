@@ -8,7 +8,6 @@ const hobbiesInput = document.getElementById('hobbies');
 const hobbiesList = document.getElementById('hobbies-list');
 imageUrlInput.addEventListener('input', validateImageUrl);
 
-
 const submitForm = () => {
   const formPhase3 = document.getElementById("formPhase3");
 
@@ -17,11 +16,14 @@ const submitForm = () => {
       // get data from form
       const formData = new FormData(formPhase3);
       const img = formData.get("image-url");
-      const hobbies = formData.get("hobbies");
-      
+      const hobbiesList = [];
+      formData.getAll('hobbies').forEach(hobby => {
+        hobbiesList.push(hobby);
+      });
+
       // prepare data to be sent to local storage
       userDataObj.image = img;
-      userDataObj.hobbies = hobbies;
+      userDataObj.hobbies = hobbiesList;
       userDataObj.accessLvl += 1   
       if (isValidImageUrl(img)) {
           setDataInLocStorage(userDataObj)
@@ -36,19 +38,19 @@ prevPageButton.addEventListener('click', () => {
 
 })
 
+const fillWithExistingData = () => {
+  const formPhase3 = document.getElementById("formPhase3");
+  if (userDataObj) {
+    const formElements = formPhase3.elements;
+    formPhase3.elements["image-url"].value = userDataObj.image;
+    
+    for (const element of formElements) {
+      if (element.type === "checkbox" && userDataObj.hobbies.includes(element.value)){
+        element.checked = true;
+      }
+    }
+  }
+}
 
-hobbiesInput.addEventListener('input', () => {
-  hobbiesList.innerHTML = '';
-  const hobbies = hobbiesInput.value.split(',');
-  for (const hobby of hobbies) {
-    const trimmedHobby = hobby.trim();
-    if (trimmedHobby) {
-      const li = document.createElement('li');
-      li.textContent = trimmedHobby;
-      hobbiesList.appendChild(li);
-    }
-  }
-});
-
-checkIfAccessIsAllowed()
+fillWithExistingData()
 submitForm();

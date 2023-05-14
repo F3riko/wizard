@@ -17,6 +17,22 @@ function validateRegFormPhase1(event) {
     goNextPage(3)
 }
 
+const fillWithExistingData = () => {
+    if(userDataObj){
+        const formData = new FormData(form);
+        
+        formData.set("happy", userDataObj.happy);
+        formData.set("skydiving", userDataObj.skydiving);
+        formData.set("pocket", userDataObj.pocket);
+
+        form.elements.happy.value = formData.get("happy");
+        form.elements.skydiving.value = formData.get("skydiving");
+        form.elements.pocket.value = formData.get("pocket");
+    }
+}
+
 buttonBack.addEventListener('click', () => {
     goPreviousPage(3)
 })
+
+fillWithExistingData()
