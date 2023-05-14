@@ -1,4 +1,7 @@
 checkIfAccessIsAllowed(2)
+
+// DOM interactions
+const formPhase2 = document.getElementById("formPhase2");
  
 const submitForm = () => {
     const formPhase2 = document.getElementById("formPhase2");
@@ -33,7 +36,20 @@ const goBack = () => {
     })
 }
 
+const fillWithExistingData = () => {
+    if(userDataObj){
+        const formData = new FormData(formPhase2);
+        
+        formData.set("city", userDataObj.city);
+        formData.set("street", userDataObj.street);
+        formData.set("number", userDataObj.number);
 
-checkIfAccessIsAllowed();
+        formPhase2.elements.city.value = formData.get("city");
+        formPhase2.elements.street.value = formData.get("street");
+        formPhase2.elements.number.value = formData.get("number");
+    }
+}
+
+fillWithExistingData()
 submitForm();
 goBack()
